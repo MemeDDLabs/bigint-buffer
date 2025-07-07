@@ -1,4 +1,4 @@
-
+//@ts-ignore
 import * as benchmark from 'benchmark';
 
 import {toBigIntBE, toBigIntLE, toBufferBE, toBufferLE} from './index';
