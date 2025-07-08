@@ -3,9 +3,13 @@
   "compilerOptions": {
     "rootDir": ".",
     "outDir": "build",
-    "target" : "esnext",
-    "lib" : [ "esnext" ],
-    "sourceMap": true
+    "target": "esnext",
+    "lib": [
+      "esnext"
+    ],
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "maxNodeModuleJsDepth": 0
   },
   "include": [
     "src/*.ts",

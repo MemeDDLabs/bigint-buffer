@@ -22,7 +22,7 @@
     "rebuild": "node-gyp rebuild",
     "check": "gts check",
     "clean": "gts clean",
-    "compile": "mkdirp dist && tsc -p . && rollup -c > dist/node.js && cross-env BROWSER=true rollup -c > dist/browser.js && cpx \"build/src/*.d.ts\" dist",
+    "compile": "mkdirp dist && tsc --maxNodeModuleJsDepth 0 -p . && rollup -c > dist/node.js && cross-env BROWSER=true rollup -c > dist/browser.js && cpx \"build/src/*.d.ts\" dist",
     "fix": "gts fix",
     "pretest": "npm run compile",
     "posttest": "npm run check"
@@ -67,13 +67,12 @@
     "microtime": "^3.0.0",
     "mkdirp": "^0.5.1",
     "mocha": "^5.2.0",
-    "pre-commit": "^1.2.2",
     "rollup": "^0.65.2",
     "rollup-plugin-replace": "^2.0.0",
     "ts-loader": "^4.5.0",
     "ts-node": "^7.0.1",
     "typedoc": "^0.12.0",
-    "typescript": "^3.2.1",
+    "typescript": "^5.8.3",
     "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0"
   },
